@@ -1,7 +1,4 @@
-
-#ENV APP_ROOT /usr/src/app/
-
-##COPY node_modules ${APP_ROOT}
+#COPY node_modules ${APP_ROOT}
 #COPY static ${APP_ROOT}
 #COPY .nuxt ${APP_ROOT}
 #COPY package.json ${APP_ROOT}
@@ -15,7 +12,6 @@ WORKDIR ${APP_ROOT}
 ADD . ${APP_ROOT}
 
 RUN npm ci
-RUN npm run build
 
 EXPOSE 3000
 

@@ -42,6 +42,7 @@ export default {
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {},
+    buildDir: process.env.REBULD === 'Y' ? '.nuxt_rebuild' : '.nuxt',
     fontawesome: {
         component: 'fa',
         icons: {
